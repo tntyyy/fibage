@@ -1,0 +1,418 @@
+@font-face {
+    font-family: SFProDisplay-Regular;
+    src: url('fonts/SFProDisplay-Regular.ttf');
+}
+
+@font-face {
+    font-family: SFProDisplay-Bold;
+    src: url('fonts/SFProDisplay-Bold.ttf');
+}
+
+@font-face {
+    font-family: SFProDisplay-Black;
+    src: url('fonts/SFProDisplay-Black.ttf');
+}
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+
+    font-family: 'SFProDisplay-Regular';
+    color: #fff;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* CSS RESET END */
+
+.container {
+    max-width: 1180px;
+    margin: 0 auto;
+}
+
+header {
+    background: #000;
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    padding: 30px 0px;
+}
+
+.logo {
+    font-size: 25px;
+    font-family: 'SFProDisplay-Bold';
+}
+
+.logo span {
+    font-family: 'SFProDisplay-Black';
+    color: #ffffb2;
+}
+
+nav {
+    font-size: 20px;
+    max-width: 435px;
+    min-width: 435px;
+    display: flex;
+    justify-content: space-between;
+}
+
+#nav-header a {
+    position: relative;
+	cursor: pointer;
+}
+
+#nav-header a:after {
+	display: block;
+	position: absolute;
+	left: 0; /*изменить на right:0;, чтобы изменить направление подчёркивания */
+	width: 0;/*задаём длинну линии до наведения курсора*/
+	height: 2px; /*задаём ширину линии*/
+	background-color: #ffffb2; /*задаём цвет линии*/
+	content: "";
+	transition: width 0.4s ease-out; /*задаём время анимации*/
+}
+
+#nav-header a:hover:after,
+            a:focus:after {
+	width: 100%; /*устанавливаем значение 100% чтобы ссылка подчёркивалась полностью*/
+}
+
+
+.header-fixed {
+    z-index: 999;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    animation-name: show-header;
+    animation-duration: 1s;
+}
+
+@keyframes show-header {
+    0% {
+        opacity: 0;
+        top: -70px;
+    }
+    100% {
+        opacity: 1;
+        top: 0;
+    }
+
+}
+
+/* header end */
+
+/* mainpage */
+
+.mainpage {
+    background: #000;
+}
+
+.mainpage-container {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 200px;
+    padding-bottom: 235px;
+    align-items: center;
+}
+
+
+
+.suptitle {
+    font-size: 16px;
+    color: #ffffb2;
+}
+
+.title {
+    font-size: 48.83px;
+    font-family: 'SFProDisplay-Bold';
+}
+
+.titles {
+    margin-top: 16px;
+    margin-bottom: 32px;
+}
+
+.title span {
+    font-size: 48.83px;
+    font-family: 'SFProDisplay-Black';
+    color: #ffffb2;
+}
+
+.button {
+    border: 3px solid #ffffb2;
+    color: #ffffb2;
+    border-radius: 20px;
+    width: 200px;
+    min-height: 70px;
+    padding: 18px 63px;
+}
+
+
+/* mainpage end */
+
+/* works */
+
+.works {
+    background: #0A0807;
+    padding-top: 146px;
+    padding-bottom: 146px;
+}
+
+.works-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.section-title {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.section-title h1 {
+    font-family: 'SFProDisplay-Bold';
+    font-size: 48.83px;
+}
+
+.line {
+    width: 53px;
+    height: 4px;
+    background: #ffffb2;
+    margin-right: 27px  ;
+}
+
+.subtitle {
+    font-size: 16px;
+    color: #ffffb2;
+}
+
+.slider {
+    width: 100%;
+    margin: 0 auto;
+
+    margin-top: 46px;
+}
+
+.slider-wrapper {
+    margin: 0 auto;
+}
+
+.swiper-slide {
+    max-width: 290px;
+}
+
+.swiper-slide img{
+    width: 100%;
+    max-height: 410px;
+}
+
+/* works end */
+
+/* reviews */
+
+.reviews {
+    background: #000;
+    padding: 146px 0px;
+}
+
+.text-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.reviews-items {
+    display: flex;
+    justify-content: space-between;
+
+    margin-top: 72px;
+}
+
+.reviews-item {
+    border: 3px solid #ffffb2;
+    border-radius: 12px;
+
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-right: 42px;
+
+    padding: 24px;
+}
+
+.reviews-item:last-child {
+    margin-right: 0px;
+}
+
+.rev-text {
+    font-size: 20px;
+    text-align: center;
+    margin-bottom: 24px;
+}
+
+#userpic {
+    position: relative;
+    top: 60px;
+}
+
+
+
+/* reviews end */
+
+/* feedback */
+
+.section-title h1 span {
+    font-family: 'SFProDisplay-Bold';
+    color: #ffffb2;
+}
+
+.feedback {
+    background: #0A0807;
+    padding: 146px 0px;
+}
+
+input[type="text"] {
+    font-family: inherit; /* 1 */
+    font-size: inherit; /* 1 */
+    line-height: inherit; /* 1 */
+    margin: 0; /* 2 */
+}
+
+.inp-fb {
+    display: block;
+    width: 100%;
+    height: calc(2.25rem + 2px);
+    padding: 0.375rem 0.75rem;
+    font-family: inherit;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #ffffb2;
+    background-color: #0A0807;
+    background-clip: padding-box;
+    border: 3px solid #fff;
+    border-radius: 20px;
+    transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+.area-fb {
+    height: 100%;
+}
+
+.feedback-wrapper {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start ;
+    max-width: 580px;
+
+    margin-top: 80px;
+    margin-bottom: 48px;
+}
+
+.left {
+    max-width: 201px;
+    margin-right: 54px;
+    height: 164px;
+}
+
+.left .inp-fb {
+    margin-bottom: 30px;
+    height: 35%;
+}
+
+.left .inp-fb:last-child {
+    margin-bottom: 0px;
+}
+
+.right {
+    width: 352px;
+    height: 164px;
+}
+
+.button-wrapper {
+    max-width: 610px;
+    text-align: right;
+
+    margin-top: 68px;
+}
+
+
+/* feedback end */
+
+/* footer */
+
+footer {
+    background: #000;
+    padding: 156px 0px;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer-logo {
+    font-size: 48.83px;
+    font-family: 'SFProDisplay-Bold';
+}
+
+.footer-left span {
+    font-family: 'SFProDisplay-Black';
+}
+
+.footer-left .line {
+    margin: 16px 0px;
+}
+
+.footer-right {
+    display: flex;
+    text-align: right;
+}
+
+.menu {
+    display: flex;
+    flex-direction: column;
+
+    margin-right: 63px;
+}
+
+.contact {
+    display: flex;
+    flex-direction: column;
+}
+
+.footer-title {
+    font-size: 20px;
+    color: #ffffb2;
+    font-family: 'SFProDisplay-Bold';
+    margin-bottom: 24px;
+}
+
+.footer-right a {
+    margin-bottom: 16px;
+}
+
+/* footer end */
